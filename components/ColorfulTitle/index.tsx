@@ -1,6 +1,6 @@
 type ColorfulTitleProps = {
   colors: string[];
-  text: string;
+  text: JSX.Element | string;
 };
 
 const ColorfulTitle = ({ colors, text }: ColorfulTitleProps) => {
