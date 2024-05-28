@@ -53,20 +53,6 @@ const Command = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (commandRef.current && !commandRef.current.contains(event.target)) {
-        setShowCommandBar(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
     <Cmd
       ref={commandRef}
@@ -100,7 +86,13 @@ const Command = () => {
         <CommandSeparator className="mt-2" />
         <CommandGroup heading="Navegação">
           {NAV_DATA.map((nav) => (
-            <Link href={nav.href} key={nav.name}>
+            <Link
+              onClick={() => {
+                setShowCommandBar(false);
+              }}
+              href={nav.href}
+              key={nav.name}
+            >
               <CommandItem className="group cursor-pointer hover:bg-zinc-700 p-2">
                 <nav.icon className="mr-2 h-4 w-4 text-white" />
                 <span className="text-white">{nav.name}</span>

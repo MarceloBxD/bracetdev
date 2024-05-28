@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 const NAV_HEADER = [
   { name: "Sobre", path: "/sobre" },
@@ -15,10 +16,30 @@ const Header = () => {
   const { setShowCommandBar } = useCommand();
 
   return (
-    <header className="flex w-full justify-between items-center text-white fixed top-4 px-4">
-      <Link href="/">
-        <div>Logo</div>
-      </Link>
+    <header
+      style={{
+        display: "flex",
+        width: "100%",
+        justifyContent: "space-between",
+        alignItems: "center",
+        color: "#fff",
+        position: "fixed",
+        top: "4",
+        padding: "16px",
+        backdropFilter: "blur(5px)",
+        WebkitBackdropFilter: "blur(5px)",
+      }}
+    >
+      <div className="relative w-10 h-10">
+        <Link href="/">
+          <Image
+            className="w-8 h-8 object-cover bg-center  cursor-pointer"
+            src="/bracet.png"
+            alt="Logo"
+            layout="fill"
+          />
+        </Link>
+      </div>
       <nav className="flex gap-2">
         {NAV_HEADER.map((nav) => (
           <a

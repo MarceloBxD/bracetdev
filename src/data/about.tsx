@@ -1,5 +1,5 @@
 export const ABOUT_DATA = {
-  title: <h1 className="text-4xl font-bold mb-5">Coffee. Code. Repeat.</h1>,
+  title: <span className="text-4xl font-bold mb-5">Coffee. Code. Repeat.</span>,
   description: (
     <p className="text-lg ">
       Desde os meus primeiros passos no mundo da programação, um pouco antes de

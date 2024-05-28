@@ -13,11 +13,18 @@ const Sobre = () => {
       transition={{ duration: 1 }}
       className="flex container flex-col justify-center pt-32 text-white"
     >
-      <ColorfulTitle colors={["#3A467E", "#202746"]} text={ABOUT_DATA.title} />
+      <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={ABOUT_DATA.title} />
       {ABOUT_DATA.description}
       {ABOUT_DATA.projects.title}
-      {ABOUT_DATA.projects.items.map((item) => (
-        <div key={item.title}>
+      {ABOUT_DATA.projects.items.map((item, index) => (
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="my-5"
+          key={index}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <Link href={item.href}>
             <h2
               className="
@@ -52,17 +59,18 @@ const Sobre = () => {
                 className="
                 text-sm
                 bg-gradient-to-r
-                from-[#3A467E]
-                to-[#202746]
+                from-[#F5E9E1]
+                to-[#EBD1C1]
                 rounded-md
                 p-1
-                text-white
+                text-black
+                font-semibold
                 text-center
                 transition-all
                 duration-300
                 ease-in-out
-                hover:from-[#202746]
-                hover:to-[#3A467E]
+                hover:from-[#EBD1C1]
+                hover:to-[#F5E9E1]
               "
                 key={tag}
               >
@@ -70,7 +78,7 @@ const Sobre = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       ))}
     </motion.div>
   );
