@@ -1,5 +1,5 @@
 import { User, Paperclip, Home, Computer } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Command as Cmd,
   CommandEmpty,
@@ -12,14 +12,6 @@ import {
 } from "@/components/ui/command";
 import { useCommand } from "@/contexts/CommandContext";
 import Link from "next/link";
-
-const GENERAL_SUGGESTIONS = [
-  {
-    icon: Paperclip,
-    name: "Copiar URL",
-    shortcut: "⌘C",
-  },
-];
 
 const NAV_DATA = [
   {
@@ -44,7 +36,22 @@ const NAV_DATA = [
 
 const Command = () => {
   const commandRef = useRef(null);
+  const [copied, setCopied] = useState(false);
   const { setShowCommandBar } = useCommand();
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(window.location.toString());
+    alert("URL copiada para a área de transferência!");
+  };
+
+  const GENERAL_SUGGESTIONS = [
+    {
+      icon: Paperclip,
+      name: "Copiar URL",
+      shortcut: "⌘C",
+      onClick: copyToClipboard,
+    },
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -63,7 +70,7 @@ const Command = () => {
   return (
     <Cmd
       ref={commandRef}
-      className="rounded-lg shadow-md bg-slate-900 py-2 px-3 bg-opacity-30 backdrop-blur-lg backdrop-filter max-h-[300px] max-w-[500px]"
+      className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start p-4 overflow-y-auto"
     >
       <CommandInput
         autoFocus
@@ -80,6 +87,7 @@ const Command = () => {
         <CommandGroup heading="Geral">
           {GENERAL_SUGGESTIONS.map((suggestion) => (
             <CommandItem
+              onClick={suggestion.onClick}
               key={suggestion.name}
               className="group cursor-pointer hover:bg-zinc-700"
             >

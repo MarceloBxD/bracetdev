@@ -7,6 +7,9 @@ import Command from "../../components/Command";
 import React from "react";
 import Hotkeys from "react-hot-keys";
 import { useCommand } from "@/contexts/CommandContext";
+import Header from "../../components/Header";
+import { BRACET_DATA } from "@/data/bracet-description";
+import { Presentation } from "../../components/Presentation";
 
 export default function Home() {
   const { showCommandBar, setShowCommandBar } = useCommand();
@@ -28,7 +31,10 @@ export default function Home() {
   console.log(showCommandBar);
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen text-white bg-[#08070B]">
+    <main className="flex flex-col justify-center items-center h-screen text-white bg-[#08070B]">
+      <Header />
+
+      <Presentation />
       <Hotkeys
         keyName="ctrl+k,command+k"
         onKeyDown={() => setShowCommandBar((prev) => !prev)}
