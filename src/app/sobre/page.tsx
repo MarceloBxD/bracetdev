@@ -68,13 +68,8 @@ const Sobre = () => {
                   className="
                 text-sm
                 bg-gradient-to-r
-<<<<<<< HEAD
                 from-[#F5E9E2]
                 to-[#E0BBA4]
-=======
-                from-[#EAD2C2]
-                to-[#E0BCA4]
->>>>>>> 421d097 (feat: Update ColorfulTitle component to accept JSX.Element as text prop)
                 rounded-md
                 p-1
                 text-black
@@ -82,13 +77,8 @@ const Sobre = () => {
                 transition-all
                 duration-300
                 ease-in-out
-<<<<<<< HEAD
                 hover:from-[#E0BBA4]
                 hover:to-[#F5E9E2]
-=======
-                hover:from-[#E0BCA4]
-                hover:to-[#EAD2C2]
->>>>>>> 421d097 (feat: Update ColorfulTitle component to accept JSX.Element as text prop)
               "
                   key={tag}
                 >
