@@ -5,9 +5,7 @@ import Command from "../../components/Command";
 
 // Import the React library
 import React from "react";
-import Hotkeys from "react-hot-keys";
 import { useCommand } from "@/contexts/CommandContext";
-import Header from "../../components/Header";
 import { Presentation } from "../../components/Presentation";
 
 import { motion } from "framer-motion";
@@ -30,11 +28,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col justify-center items-center h-screen text-white bg-[#08070B]">
+    <main className="flex flex-col justify-center items-center h-screen text-white">
       <motion.div
         className="flex flex-col justify-center items-center"
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <Presentation />

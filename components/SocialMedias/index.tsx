@@ -11,7 +11,7 @@ const SocialMedias = () => {
 
   return (
     <footer
-      className={`${JosefinSlab.className} flex justify-center items-center gap-8 text-white fixed bottom-4 w-full`}
+      className={`${JosefinSlab.className} flex justify-center items-center gap-8 mb-5 md:mb-0 text-white w-full`}
     >
       {socialMedias.map((socialMedia) => (
         <div className="flex items-center gap-2" key={socialMedia.name}>
@@ -22,9 +22,8 @@ const SocialMedias = () => {
             onMouseLeave={() => setItemHovered(null)}
             rel="noopener noreferrer"
           >
-            {socialMedia.name}
+            {socialMedia.icon}
           </a>
-          {itemHovered === socialMedia.name && socialMedia.icon}
         </div>
       ))}
     </footer>
