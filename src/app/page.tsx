@@ -28,7 +28,7 @@ export default function Home() {
   console.log(showCommandBar);
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen text-white bg-black">
+    <main className="flex flex-col items-center justify-center h-screen text-white bg-[#08070B]">
       <Hotkeys
         keyName="ctrl+k,command+k"
         onKeyDown={() => setShowCommandBar((prev) => !prev)}
