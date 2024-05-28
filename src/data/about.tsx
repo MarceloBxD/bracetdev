@@ -1,7 +1,7 @@
 export const ABOUT_DATA = {
   title: <span className="text-4xl font-bold mb-5">Coffee. Code. Repeat.</span>,
   description: (
-    <p className="text-lg ">
+    <p className="text-lg mt-5">
       Desde os meus primeiros passos no mundo da programação, um pouco antes de
       embarcar na jornada da faculdade de <b>Engenharia de Computação</b>, eu
       sabia que havia encontrado minha paixão. Agora, enquanto estou em
