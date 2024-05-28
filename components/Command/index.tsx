@@ -36,6 +36,7 @@ const NAV_DATA = [
 
 const Command = () => {
   const commandRef = useRef(null);
+  const [copied, setCopied] = useState(false);
   const { setShowCommandBar } = useCommand();
 
   const copyToClipboard = () => {
@@ -98,23 +99,15 @@ const Command = () => {
         </CommandGroup>
         <CommandSeparator className="mt-2" />
         <CommandGroup heading="Navegação">
-          {NAV_DATA.map((nav) => {
-            return (
-              <Link
-                href={nav.href}
-                onClick={() => {
-                  setShowCommandBar(false);
-                }}
-                key={nav.name}
-              >
-                <CommandItem className="group cursor-pointer hover:bg-zinc-700 p-2">
-                  <nav.icon className="mr-2 h-4 w-4 text-white" />
-                  <span className="text-white">{nav.name}</span>
-                  <CommandShortcut>{nav.shortcut}</CommandShortcut>
-                </CommandItem>
-              </Link>
-            );
-          })}
+          {NAV_DATA.map((nav) => (
+            <Link href={nav.href} key={nav.name}>
+              <CommandItem className="group cursor-pointer hover:bg-zinc-700 p-2">
+                <nav.icon className="mr-2 h-4 w-4 text-white" />
+                <span className="text-white">{nav.name}</span>
+                <CommandShortcut>{nav.shortcut}</CommandShortcut>
+              </CommandItem>
+            </Link>
+          ))}
         </CommandGroup>
       </CommandList>
     </Cmd>

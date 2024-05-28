@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Edu_TAS_Beginner, Inter } from "next/font/google";
 import "./globals.css";
 
 // CommandProvider import
-import { CommandProvider, useCommand } from "@/contexts/CommandContext";
-import { Command, SocialMedias, Header } from "../../components";
+import { CommandProvider } from "@/contexts/CommandContext";
+import Header from "../../components/Header";
+import SocialMedias from "../../components/SocialMedias";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Marcelo Bracet // Home",
+  title: "Bracet",
   description: "A simple, modern, and fast portfolio",
 };
 
