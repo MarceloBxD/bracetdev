@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col justify-center items-center h-screen text-white">
+    <main className="flex container flex-col justify-center items-center h-screen text-white">
       <motion.div
         className="flex flex-col justify-center items-center"
         initial={{ opacity: 0 }}
