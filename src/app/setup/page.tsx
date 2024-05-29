@@ -34,7 +34,13 @@ const Section: React.FC<SectionProps> = ({ title, items }) => (
     ) : (
       title
     )}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ amount: 0.5 }}
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10"
+    >
       {items.map((item, index) => (
         <div
           key={index}
@@ -54,7 +60,7 @@ const Section: React.FC<SectionProps> = ({ title, items }) => (
           </div>
         </div>
       ))}
-    </div>
+    </motion.div>
   </>
 );
 
