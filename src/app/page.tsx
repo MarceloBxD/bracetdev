@@ -1,6 +1,5 @@
 "use client";
 
-import CommandTitle from "../../components/CommandTitle";
 import Command from "../../components/Command";
 
 // Import the React library
@@ -11,7 +10,7 @@ import { Presentation } from "../../components/Presentation";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const { showCommandBar, setShowCommandBar } = useCommand();
+  const { showCommandBar } = useCommand();
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {

@@ -35,14 +35,18 @@ const NAV_DATA = [
 ];
 
 const Command = () => {
-  const commandRef = useRef(null);
+  const commandRef = useRef<HTMLDivElement>(null);
   const [copied, setCopied] = useState(false);
-  const { setShowCommandBar } = useCommand();
+  const { showCommandBar, setShowCommandBar } = useCommand();
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(window.location.toString());
     alert("URL copiada para a área de transferência!");
   };
+
+  useEffect(() => {
+    console.log(showCommandBar);
+  }, [showCommandBar, setShowCommandBar]);
 
   const GENERAL_SUGGESTIONS = [
     {
@@ -53,14 +57,31 @@ const Command = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        commandRef.current &&
+        event.target instanceof Node &&
+        !commandRef.current.contains(event.target)
+      ) {
+        setShowCommandBar(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [commandRef, setShowCommandBar]);
+
   return (
     <Cmd
       ref={commandRef}
-      className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start p-4 overflow-y-auto"
+      className="absolute w-2/3 md:w-1/2 h-1/3 left-[50%] -translate-x-[50%] top-[10%] bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start p-4 overflow-y-auto"
     >
       <CommandInput
         autoFocus
-        className=" text-white rounded-md px-3 py-2 text-sm outline-none placeholder-text-white disabled:cursor-not-allowed disabled:opacity-50"
+        className=" text-white w-full rounded-md px-3 py-2 text-sm outline-none placeholder-text-white disabled:cursor-not-allowed disabled:opacity-50"
         placeholder="Type a command or search..."
       />
       <CommandList>

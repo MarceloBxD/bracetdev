@@ -4,6 +4,8 @@ import React from "react";
 import ColorfulTitle from "../../../components/ColorfulTitle";
 import { motion } from "framer-motion";
 import { SETUP_DATA } from "@/data/setup";
+import { useCommand } from "@/contexts/CommandContext";
+import Command from "../../../components/Command";
 
 interface Item {
   title: string;
@@ -58,26 +60,33 @@ const Section: React.FC<SectionProps> = ({ title, items }) => (
 
 const Sobre: React.FC = () => {
   const setupData: SetupData = SETUP_DATA;
+  const { showCommandBar } = useCommand();
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="flex container flex-col justify-center pt-32 text-white"
-    >
-      {typeof setupData.title === "string" ? (
-        <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={setupData.title} />
-      ) : (
-        setupData.title
-      )}
-      {setupData.review}
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex container flex-col justify-center pt-32 text-white"
+      >
+        {typeof setupData.title === "string" ? (
+          <ColorfulTitle
+            colors={["#F5E9E1", "#EBD1C1"]}
+            text={setupData.title}
+          />
+        ) : (
+          setupData.title
+        )}
+        {setupData.review}
 
-      {setupData.equipments && <Section {...setupData.equipments} />}
-      {setupData.keyboards && <Section {...setupData.keyboards} />}
-      {setupData.desktop && <Section {...setupData.desktop} />}
-      {setupData.monitors && <Section {...setupData.monitors} />}
-    </motion.div>
+        {setupData.equipments && <Section {...setupData.equipments} />}
+        {setupData.keyboards && <Section {...setupData.keyboards} />}
+        {setupData.desktop && <Section {...setupData.desktop} />}
+        {setupData.monitors && <Section {...setupData.monitors} />}
+      </motion.div>
+      {showCommandBar && <Command />}
+    </>
   );
 };
 

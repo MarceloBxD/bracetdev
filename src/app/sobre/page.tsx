@@ -4,46 +4,52 @@ import { ABOUT_DATA } from "@/data/about";
 import ColorfulTitle from "../../../components/ColorfulTitle";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Command from "../../../components/Command";
+import { useCommand } from "@/contexts/CommandContext";
 
 const Sobre = () => {
+  const { showCommandBar } = useCommand();
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="flex container flex-col justify-center pt-32 text-white"
-    >
-      <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={ABOUT_DATA.title} />
-      {ABOUT_DATA.description}
-      {ABOUT_DATA.projects.title}
-      {ABOUT_DATA.projects.items.map((item, index) => (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="my-5"
-          key={index}
-          viewport={{ amount: 0.5 }}
-        >
-          <Link href={item.href}>
-            <h2
-              className="
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex container flex-col justify-center pt-32 text-white"
+      >
+        <ColorfulTitle
+          colors={["#F5E9E1", "#EBD1C1"]}
+          text={ABOUT_DATA.title}
+        />
+        {ABOUT_DATA.description}
+        {ABOUT_DATA.projects.title}
+        {ABOUT_DATA.projects.items.map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="my-5"
+            key={index}
+            viewport={{ amount: 0.5 }}
+          >
+            <Link href={item.href}>
+              <h2
+                className="
               text-lg
               font-bold
+              relative
               my-5
-              underline
+              tracking-wider
               cursor-pointer
-              transition-all
-              duration-300
-              ease-in-out
             "
-            >
-              {item.title}
-            </h2>
-          </Link>
-          <p>{item.description}</p>
-          <ul
-            className="
+              >
+                {item.title}
+              </h2>
+            </Link>
+            <p>{item.description}</p>
+            <ul
+              className="
             grid
             grid-cols-2
             gap-2
@@ -53,10 +59,10 @@ const Sobre = () => {
             xl:grid-cols-8
             mt-5
           "
-          >
-            {item.tags.map((tag) => (
-              <li
-                className="
+            >
+              {item.tags.map((tag) => (
+                <li
+                  className="
                 text-sm
                 bg-gradient-to-r
                 from-[#F5E9E1]
@@ -72,15 +78,17 @@ const Sobre = () => {
                 hover:from-[#EBD1C1]
                 hover:to-[#F5E9E1]
               "
-                key={tag}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      ))}
-    </motion.div>
+                  key={tag}
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </motion.div>
+      {showCommandBar && <Command />}
+    </>
   );
 };
 
