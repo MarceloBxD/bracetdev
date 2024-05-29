@@ -7,7 +7,7 @@ import { socialMedias } from "@/data/social-medias";
 const SocialMedias = () => {
   return (
     <footer
-      className={`flex justify-center items-center gap-8 mb-5 text-white w-full`}
+      className={`flex justify-center items-center gap-8 my-8 text-white w-full`}
     >
       {socialMedias.map((socialMedia) => (
         <div className="flex items-center gap-2" key={socialMedia.name}>

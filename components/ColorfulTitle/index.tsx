@@ -11,7 +11,7 @@ const ColorfulTitle = ({ colors, text }: ColorfulTitleProps) => {
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
       }}
-      className="text-4xl font-bold"
+      className="text-2xl font-bold my-5"
     >
       {text}
     </h1>

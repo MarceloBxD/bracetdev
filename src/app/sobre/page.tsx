@@ -18,12 +18,12 @@ const Sobre = () => {
       {ABOUT_DATA.projects.title}
       {ABOUT_DATA.projects.items.map((item, index) => (
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           className="my-5"
           key={index}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ amount: 0.5 }}
         >
           <Link href={item.href}>
             <h2
