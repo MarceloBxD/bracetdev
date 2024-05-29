@@ -12,13 +12,13 @@ interface Item {
 }
 
 interface SectionProps {
-  title: string;
+  title: JSX.Element | string;
   items: Item[];
 }
 
 interface SetupData {
-  title: string;
-  review: string;
+  title: JSX.Element | string;
+  review: JSX.Element | string;
   equipments?: SectionProps;
   keyboards?: SectionProps;
   desktop?: SectionProps;
@@ -27,12 +27,16 @@ interface SetupData {
 
 const Section: React.FC<SectionProps> = ({ title, items }) => (
   <>
-    <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={title} />
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 my-8 md:my-5 ">
+    {typeof title === "string" ? (
+      <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={title} />
+    ) : (
+      title
+    )}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       {items.map((item, index) => (
-        <div key={index} className="rounded-lg p-5 shadow-md shadow-white">
-          <h1 className="text-xl font-bold text-white">{item.title}</h1>
-          <p className="text-md mt-5 text-white">{item.review}</p>
+        <div key={index} className="bg-white rounded-lg p-5">
+          <h1 className="text-2xl font-bold text-black">{item.title}</h1>
+          <p className="text-lg mt-5">{item.review}</p>
           <div className="flex flex-wrap mt-5">
             {item.tags.map((tag, tagIndex) => (
               <span
@@ -59,7 +63,11 @@ const Sobre: React.FC = () => {
       transition={{ duration: 1 }}
       className="flex container flex-col justify-center pt-32 text-white"
     >
-      <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={setupData.title} />
+      {typeof setupData.title === "string" ? (
+        <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={setupData.title} />
+      ) : (
+        setupData.title
+      )}
       {setupData.review}
 
       {setupData.equipments && <Section {...setupData.equipments} />}
