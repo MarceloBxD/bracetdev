@@ -77,7 +77,7 @@ const Command = () => {
   return (
     <Cmd
       ref={commandRef}
-      className="absolute w-2/3 md:w-1/2 h-1/3 left-[50%] -translate-x-[50%] top-[10%] bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start p-4 overflow-y-auto"
+      className="absolute w-2/3 md:w-1/2 h-2/3 md:h-1/3 left-[50%] -translate-x-[50%] top-[10%] bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start p-4 overflow-y-auto"
     >
       <CommandInput
         autoFocus
