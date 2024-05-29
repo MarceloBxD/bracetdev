@@ -34,9 +34,12 @@ const Section: React.FC<SectionProps> = ({ title, items }) => (
     )}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       {items.map((item, index) => (
-        <div key={index} className="bg-white rounded-lg p-5">
-          <h1 className="text-2xl font-bold text-black">{item.title}</h1>
-          <p className="text-lg mt-5">{item.review}</p>
+        <div
+          key={index}
+          className="bg-transparent my-2 rounded-lg p-5 shadow-md shadow-slate-500"
+        >
+          <h1 className="text-xl font-bold text-white">{item.title}</h1>
+          <p className="text-md text-white mt-5">{item.review}</p>
           <div className="flex flex-wrap mt-5">
             {item.tags.map((tag, tagIndex) => (
               <span
