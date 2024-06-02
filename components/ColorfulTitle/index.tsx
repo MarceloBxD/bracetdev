@@ -7,7 +7,7 @@ const ColorfulTitle = ({ colors, text }: ColorfulTitleProps) => {
   return (
     <h1
       style={{
-        background: `linear-gradient(to right, ${colors.join(", ")})`,
+        background: `linear-gradient(to right, ${colors.join(", ")} 30%)`,
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
       }}

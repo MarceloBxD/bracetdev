@@ -19,7 +19,7 @@ const Sobre = () => {
         className="flex container flex-col justify-center pt-32 text-white"
       >
         <ColorfulTitle
-          colors={["#F5E9E1", "#EBD1C1"]}
+          colors={["#92BFB1", "#FFFFFF"]}
           text={ABOUT_DATA.title}
         />
         {ABOUT_DATA.description}
@@ -65,8 +65,8 @@ const Sobre = () => {
                   className="
                 text-sm
                 bg-gradient-to-r
-                from-[#F5E9E1]
-                to-[#EBD1C1]
+                from-[#92BFB1]
+                to-[#FFFFFF]
                 rounded-md
                 p-1
                 text-black
@@ -75,8 +75,8 @@ const Sobre = () => {
                 transition-all
                 duration-300
                 ease-in-out
-                hover:from-[#EBD1C1]
-                hover:to-[#F5E9E1]
+                hover:from-[#FFFFFF]
+                hover:to-[#92BFB1]
               "
                   key={tag}
                 >

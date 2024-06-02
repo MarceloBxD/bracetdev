@@ -76,14 +76,8 @@ const Sobre: React.FC = () => {
         transition={{ duration: 1 }}
         className="flex container flex-col justify-center pt-32 text-white"
       >
-        {typeof setupData.title === "string" ? (
-          <ColorfulTitle
-            colors={["#F5E9E1", "#EBD1C1"]}
-            text={setupData.title}
-          />
-        ) : (
-          setupData.title
-        )}
+        <ColorfulTitle colors={["#92BFB1", "#FFFFFF"]} text={setupData.title} />
+
         {setupData.review}
 
         {setupData.equipments && <Section {...setupData.equipments} />}

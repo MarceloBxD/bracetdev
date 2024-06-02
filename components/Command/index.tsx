@@ -36,7 +36,6 @@ const NAV_DATA = [
 
 const Command = () => {
   const commandRef = useRef<HTMLDivElement>(null);
-  const [copied, setCopied] = useState(false);
   const { showCommandBar, setShowCommandBar } = useCommand();
 
   const copyToClipboard = () => {
