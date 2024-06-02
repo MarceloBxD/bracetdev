@@ -48,15 +48,6 @@ const Command = () => {
     console.log(showCommandBar);
   }, [showCommandBar, setShowCommandBar]);
 
-  const GENERAL_SUGGESTIONS = [
-    {
-      icon: Paperclip,
-      name: "Copiar URL",
-      shortcut: "⌘C",
-      onClick: copyToClipboard,
-    },
-  ];
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -91,20 +82,6 @@ const Command = () => {
         >
           No results found.
         </CommandEmpty>
-        <CommandGroup heading="Geral">
-          {GENERAL_SUGGESTIONS.map((suggestion) => (
-            <CommandItem
-              onClick={suggestion.onClick}
-              key={suggestion.name}
-              className="group cursor-pointer hover:bg-zinc-700"
-            >
-              <suggestion.icon className="mr-2 h-4 w-4 text-white" />
-              <span className="text-white">{suggestion.name}</span>
-              <CommandShortcut>{suggestion.shortcut}</CommandShortcut>
-            </CommandItem>
-          ))}
-        </CommandGroup>
-        <CommandSeparator className="mt-2" />
         <CommandGroup heading="Navegação">
           {NAV_DATA.map((nav) => (
             <Link

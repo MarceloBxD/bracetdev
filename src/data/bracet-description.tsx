@@ -1,5 +1,5 @@
 export const BRACET_DATA = {
   name: "Marcelo Bracet",
-  role: "Desenvolvedor Junior Front End & Back End",
-  description: "AWS & Docker & Git",
+  role: "Desenvolvedor Front End Júnior",
+  description: "NextJS & ReactJS | TypeScript | NodeJS | TailwindCSS",
 };

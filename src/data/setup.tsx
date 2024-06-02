@@ -16,16 +16,10 @@ export const SETUP_DATA = {
     title: <span className="text-3xl font-bold my-5">Equipamentos</span>,
     items: [
       {
-        title: "MacBook Pro 13” 2020",
+        title: "Dell i5-11320H + 8GB RAM + Windows 11",
         review:
-          "Meu principal equipamento de trabalho, o MacBook Pro 13” 2020 com processador Intel Core i5 de 10ª geração, 16GB de RAM e 512GB de armazenamento SSD. A tela Retina de 13 polegadas com True Tone é um espetáculo",
-        tags: [
-          "Apple",
-          "MacBook Pro",
-          "Intel Core i5",
-          "16GB RAM",
-          "512GB SSD",
-        ],
+          "Meu notebook é um Dell i5-11320H com 8GB de RAM e Windows 11. É um notebook que me atende muito bem para desenvolvimento e edição de vídeos. Estou usando ele atualmente.",
+        tags: ["Dell", "8GB RAM", "Windows 11", "Dell i5-11320H"],
       },
     ],
   },
@@ -33,16 +27,16 @@ export const SETUP_DATA = {
     title: <span className="text-3xl font-bold my-5">Teclados</span>,
     items: [
       {
-        title: "Keychron K2",
+        title: "Redragon Kumara K552 RGB",
         review:
-          "O Keychron K2 é um teclado mecânico compacto, com teclas retroiluminadas e conexão Bluetooth. O switch é o Gateron Brown, que é tátil e silencioso. O teclado é compatível com Windows, macOS e Linux.",
-        tags: ["Keychron", "K2", "Gateron Brown", "Bluetooth"],
+          "O Redragon Kumara K552 RGB é um teclado mecânico compacto, com teclas retroiluminadas e switchs Outemu Blue. Definitivamente é o teclado mais barulhento que já tive.",
+        tags: ["Redragon", "Kumara", "RGB", "Compacto", "Switch Blue"],
       },
       {
-        title: "Keychron K6",
+        title: "Machenike k500 B84",
         review:
-          "O Keychron K6 é um teclado mecânico compacto, com teclas retroiluminadas e conexão Bluetooth. O switch é o Gateron Brown, que é tátil e silencioso. O teclado é compatível com Windows, macOS e Linux.",
-        tags: ["Keychron", "K6", "Gateron Brown", "Bluetooth"],
+          "O Machenike k500 B84 é um teclado mecânico compacto 75%, com teclas retroiluminadas e switchs Gateron Brown. É um teclado muito confortável e silencioso, perfeito para quem trabalha em ambientes compartilhados. Estou usando ele atualmente.",
+        tags: ["Machenkie", "K500", "Switch Brown", "75%"],
       },
     ],
   },
@@ -50,10 +44,10 @@ export const SETUP_DATA = {
     title: <span className="text-3xl font-bold my-5">Desktop</span>,
     items: [
       {
-        title: "iMac 21.5” 2017",
+        title: "i5 12400F + RX 580 8GB + 32GB RAM + 1TB SSD",
         review:
-          "O iMac 21.5” 2017 é um computador all-in-one com tela Retina 4K de 21,5 polegadas, processador Intel Core i5 de 7ª geração, 8GB de RAM e 1TB de armazenamento HDD.",
-        tags: ["Apple", "iMac", "Intel Core i5", "8GB RAM", "1TB HDD"],
+          "Meu desktop é um i5 12400F com 32GB de RAM, 1TB de SSD e uma RX 580 8GB. É um setup que me atende muito bem para jogos e edição de vídeos. O gabinete é um Cooler Master MB511 ARGB.",
+        tags: ["Windows", "Desktop", "Intel Core i5", "32GB RAM", "1TB SSD"],
       },
     ],
   },
