@@ -61,7 +61,7 @@ const Sobre = () => {
             mt-5
           "
             >
-              {item?.tags.map((tag) => (
+              {item?.tags?.map((tag) => (
                 <li
                   className="
                 text-sm
