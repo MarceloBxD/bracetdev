@@ -17,19 +17,16 @@ const NAV_DATA = [
   {
     icon: Home,
     name: "Home",
-    shortcut: "⌘H",
     href: "/",
   },
   {
     icon: User,
     name: "Sobre",
-    shortcut: "⌘P",
     href: "/sobre",
   },
   {
     icon: Computer,
     name: "Setup",
-    shortcut: "⌘S",
     href: "/setup",
   },
 ];
@@ -93,7 +90,6 @@ const Command = () => {
               <CommandItem className="group cursor-pointer hover:bg-zinc-700 p-2">
                 <nav.icon className="mr-2 h-4 w-4 text-white" />
                 <span className="text-white">{nav.name}</span>
-                <CommandShortcut>{nav.shortcut}</CommandShortcut>
               </CommandItem>
             </Link>
           ))}
