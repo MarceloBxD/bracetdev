@@ -21,19 +21,11 @@ export const ABOUT_DATA = {
         tags: ["NextJS", "TypeScript", "SCSS", "NestJS", "TypeORM", "MySQL"],
       },
       {
-        title: "Faro Beach Club",
-        href: "https://farobeachclub.com.br",
+        title: "Jeep Compass 4XE",
+        href: "https://www.jeep.com.br/compass/4xe/",
         description:
-          "Imagine um ambiente digital tão relaxante quanto uma praia ao pôr do sol. Foi exatamente isso que criei com o projeto Faro Beach Club. A experiência de usuário que desenvolvi aqui é tão suave que você quase pode sentir a brisa do mar!",
-        tags: ["NextJS", "TypeScript", "Scss"],
+          "Durante a fase de QA, desenvolvi seções do site junto a outros desenvolvedores, utilizando Figma para garantir que cada detalhe estivesse perfeito. Cada linha de código que escrevi foi testada e refinada para garantir que o site fosse tão robusto quanto o próprio Jeep Compass 4XE.",
       },
-      // {
-      //   title: "Jeep Compass 4XE",
-      //   href: "https://jeepcompass4xe.com.br",
-      //   description:
-      //     "Durante a fase de QA desses projetos automotivos, testei cada funcionalidade com a precisão de um engenheiro e a curiosidade de um aventureiro. Cada bug encontrado era uma oportunidade de fazer a diferença e garantir que tudo estivesse perfeito para os futuros motoristas.",
-      //   tags: ["React", "TypeScript", "Tailwind CSS"],
-      // },
       {
         title: "Fiat Argo",
         href: "https://argo.fiat.com.br/",
@@ -47,6 +39,13 @@ export const ABOUT_DATA = {
         description:
           "Nada como estar envolvido em projetos inovadores! No Fiat Titano, minha missão foi assegurar que o produto final fosse tão robusto quanto o nome sugere. Cada detalhe foi verificado com cuidado para entregar excelência em cada aspecto.",
         tags: ["NextJS", "TypeScript", "SCSS", "Docker"],
+      },
+      {
+        title: "Faro Beach Club",
+        href: "https://farobeachclub.com.br",
+        description:
+          "Imagine um ambiente digital tão relaxante quanto uma praia ao pôr do sol. Foi exatamente isso que criei com o projeto Faro Beach Club. A experiência de usuário que desenvolvi aqui é tão suave que você quase pode sentir a brisa do mar!",
+        tags: ["NextJS", "TypeScript", "Scss"],
       },
       {
         title: "CBL Consultoria",
