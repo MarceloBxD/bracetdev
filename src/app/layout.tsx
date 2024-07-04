@@ -51,7 +51,6 @@ export default function RootLayout({
         <CommandProvider>
           <Header />
           {children}
-
           <SocialMedias />
         </CommandProvider>
       </body>

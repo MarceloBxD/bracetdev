@@ -30,6 +30,7 @@ export const Presentation = () => {
           {!showCommandBar && <CommandTitle />}
         </Hotkeys>
       </div>
+      
     </div>
   );
 };
