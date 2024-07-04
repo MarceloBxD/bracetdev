@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const SocialMedias = () => {
   return (
     <footer
-      className={`flex justify-end items-center gap-8 bottom-4 right-4 fixed text-white w-full`}
+      className={`flex justify-end items-center gap-8 bottom-9 right-4 fixed text-white w-full`}
     >
       {socialMedias.map((socialMedia) => (
         <div className="flex items-center gap-2" key={socialMedia.name}>
@@ -18,7 +18,7 @@ const SocialMedias = () => {
         </div>
       ))}
       <motion.div
-        className="fixed rounded-lg group flex hover:bg-white transition-colors duration-300 items-center border cursor-pointer p-1 z-50 bottom-4 left-4"
+        className="fixed rounded-lg group flex hover:bg-white transition-colors duration-300 items-center border cursor-pointer p-1 z-50 bottom-6 left-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
