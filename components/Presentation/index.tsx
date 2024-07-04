@@ -30,7 +30,34 @@ export const Presentation = () => {
           {!showCommandBar && <CommandTitle />}
         </Hotkeys>
       </div>
-      
+      <motion.div
+        className="fixed rounded-lg group flex hover:bg-white transition-colors duration-300 items-center border cursor-pointer p-1 z-50 bottom-6 left-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <a
+          href="/Cv-MarceloBracet.pdf"
+          download="bracet-cv.pdf"
+          className="text-white group-hover:text-black font-bold text-sm px-2 py-2 rounded-lg"
+        >
+          Download CV
+        </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4 text-white group-hover:text-black "
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </motion.div>
     </div>
   );
 };

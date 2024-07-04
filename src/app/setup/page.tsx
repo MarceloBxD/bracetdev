@@ -28,18 +28,18 @@ interface SetupData {
 }
 
 const Section: React.FC<SectionProps> = ({ title, items }) => (
-  <>
+  <div>
     {typeof title === "string" ? (
       <ColorfulTitle colors={["#F5E9E1", "#EBD1C1"]} text={title} />
     ) : (
-      title
+      <h1 className="mt-8">{title}</h1>
     )}
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ amount: 0.5 }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10"
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8"
     >
       {items.map((item, index) => (
         <div
@@ -61,7 +61,7 @@ const Section: React.FC<SectionProps> = ({ title, items }) => (
         </div>
       ))}
     </motion.div>
-  </>
+  </div>
 );
 
 const Sobre: React.FC = () => {
