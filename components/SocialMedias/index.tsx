@@ -18,7 +18,7 @@ const SocialMedias = () => {
         </div>
       ))}
       <motion.div
-        className="fixed rounded-lg flex items-center border cursor-pointer p-1 z-50 bottom-4 left-4"
+        className="fixed rounded-lg group flex hover:bg-white transition-colors duration-300 items-center border cursor-pointer p-1 z-50 bottom-4 left-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -26,13 +26,13 @@ const SocialMedias = () => {
         <a
           href="/Cv-MarceloBracet.pdf"
           download="bracet-cv.pdf"
-          className="text-white font-bold text-sm px-4 py-2 rounded-lg"
+          className="text-white group-hover:text-black font-bold text-sm px-2 py-2 rounded-lg"
         >
           Download CV
         </a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 text-white"
+          className="h-4 w-4 text-white group-hover:text-black "
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
