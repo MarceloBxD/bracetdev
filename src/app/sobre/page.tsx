@@ -42,6 +42,7 @@ const Sobre = () => {
               my-5
               tracking-wider
               cursor-pointer
+              underline
             "
               >
                 {item.title}

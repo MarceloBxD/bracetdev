@@ -14,10 +14,10 @@ export const ABOUT_DATA = {
     title: <h1 className="text-3xl font-bold my-5">Projetos</h1>,
     items: [
       {
-        title: "Peugeot CMS",
-        href: "https://peugeot-cms.vercel.app",
+        title: "PEUGEOT CASACOR 2024",
+        href: "https://www.peugeot.com.br/casacor/test-drive/?utm_source=sitenot%C3%ADcias-&utm_medium=ctatestdrive&utm_campaign=casacor&_ga=2.197221551.1051271073.1720058601-1282595679.1718041435&_gac=1.23976392.1720058658.Cj0KCQjw7ZO0BhDYARIsAFttkChnOI3qX0grKD_JG7WbQuqncBJhBYwxjvDvWuiEizxVUKbX0ym26PYaArccEALw_wcB&_gl=1*66ietu*_ga*MTI4MjU5NTY3OS4xNzE4MDQxNDM1*_ga_QYNKFS2HMM*MTcyMDA1ODYwMS4xLjEuMTcyMDA1ODY2NC4wLjAuMA..*_gcl_aw*R0NMLjE3MjAwNTg2MDMuQ2owS0NRanc3Wk8wQmhEWUFSSXNBRnR0a0Nobk9JM3FYMGdyS0RfSkc3V2JRdXFuY0JKaEJZd3hqdkR2V3VpRWl6eFZVS2JYMHltMjZQWWFBcmNjRUFMd193Y0I.*_gcl_dc*R0NMLjE3MjAwNTg2MDMuQ2owS0NRanc3Wk8wQmhEWUFSSXNBRnR0a0Nobk9JM3FYMGdyS0RfSkc3V2JRdXFuY0JKaEJZd3hqdkR2V3VpRWl6eFZVS2JYMHltMjZQWWFBcmNjRUFMd193Y0I.*_gcl_au*Mjc0MTAyMTIwLjE3MTgwNDE0MzY.*_ga_9G5Z1EKR41*MTcyMDA1ODYwMi40LjEuMTcyMDA1ODY2NC41OS4wLjE0Nzc3NTg3NzM.*_ga_LX40T0YCTY*MTcyMDA1ODYwMS4zLjEuMTcyMDA1ODY2NC4wLjAuMA..",
         description:
-          "Aqui foi onde realmente brilhei como desenvolvedor Front-end, criando uma interface elegante e funcional usando Next.js e TypeScript. Além disso, integrei esse front-end com um back-end construído em NestJS e TypeORM, garantindo uma experiência perfeita do início ao fim.",
+          "PEUGEOT CASACOR 2024 - Aqui foi onde realmente brilhei como desenvolvedor Front-end, criando uma interface elegante e funcional usando Next.js e TypeScript. Além disso, integrei esse front-end com um back-end construído em NestJS e TypeORM, garantindo uma experiência perfeita do início ao fim.",
         tags: ["NextJS", "TypeScript", "SCSS", "NestJS", "TypeORM", "MySQL"],
       },
       {
@@ -36,17 +36,17 @@ export const ABOUT_DATA = {
       // },
       {
         title: "Fiat Argo",
-        href: "https://fiatargo.com.br",
+        href: "https://argo.fiat.com.br/",
         description:
           "Durante a fase de QA desses projetos automotivos, testei cada funcionalidade com a precisão de um engenheiro e a curiosidade de um aventureiro. Cada bug encontrado era uma oportunidade de fazer a diferença e garantir que tudo estivesse perfeito para os futuros motoristas.",
-        tags: ["React", "TypeScript", "Tailwind CSS"],
+        tags: ["NextJs", "TypeScript", "SCSS", "CSS", "Docker"],
       },
       {
         title: "Fiat Titano",
-        href: "https://fiattitano.com.br",
+        href: "https://titano.fiat.com.br/",
         description:
           "Nada como estar envolvido em projetos inovadores! No Fiat Titano, minha missão foi assegurar que o produto final fosse tão robusto quanto o nome sugere. Cada detalhe foi verificado com cuidado para entregar excelência em cada aspecto.",
-        tags: ["NextJS", "TypeScript", "Styled Components"],
+        tags: ["NextJS", "TypeScript", "SCSS", "Docker"],
       },
       {
         title: "CBL Consultoria",
